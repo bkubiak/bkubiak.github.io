@@ -2,7 +2,7 @@
 
 gRPC uses HTTP2 as based transport. The protocol is available at https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md.
 
-## Capturing gRPC request with Wireshark
+### Capturing gRPC request with Wireshark
 
 Here are steps to capture request:
 
@@ -26,11 +26,11 @@ HEADERS 0000570104000000018386458e629f43accbe8f50ebc8c632d141f418aa0e41d139d09b8
 DATA 00000c00010000000100000000070a05576f726c64
 ```
 
-## Sending gRPC request
+### Sending gRPC request
 
 You can use many different tools to send a gRPC request as a client.
 
-### Node.js
+#### Node.js
 
 ```javascript
 var net = require('net');
@@ -65,11 +65,11 @@ client.on('close', function() {
 ```
 
 
-### Go
+#### Go
 
-### nc command
+#### nc command
 
-### grpcc
+#### grpcc
 
 
 ---------
