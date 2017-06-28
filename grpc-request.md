@@ -12,10 +12,13 @@ Here are steps to capture request:
 * find packets sent in HTTP2 protocol that are identified as `Magic`, `SETTINGS`, `HEADERS` and `DATA`.
 * copy streams in these packets as a Hex Stream
 
+
+![wireshark](./assets/images/wireshark.png "Wireshark - capturing HTTP2 traffic")
+
+
 If you don't see packets in HTTP2 protocol, click "Analyze" -> "Decode As...".
 Then, add `TCP port X` with `HTTP2` protocol, where `X` is port of gRPC server (e.g. `8083`).
 
-![wireshark](./assets/images/wireshark.png "Wireshark - capturing HTTP2 traffic")
 
 After the process you should have required data in hex:
 ```
