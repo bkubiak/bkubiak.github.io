@@ -1,4 +1,4 @@
-# Make gRPC requests
+# gRPC - raw requests
 
 gRPC uses HTTP2 as based transport. The protocol is available [here](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md).
 
@@ -6,18 +6,18 @@ gRPC uses HTTP2 as based transport. The protocol is available [here](https://git
 
 Here are steps to capture request:
 
-* run Wireshark and select Capture `Loopback: (lo0)`
+* run Wireshark and select an interface to capture traffic
 * run both gRPC server and client
 * trigger request in client
 * find packets sent in HTTP2 protocol that are identified as `Magic`, `SETTINGS`, `HEADERS` and `DATA`.
 * copy streams in these packets as a Hex Stream
 
-
-![wireshark](./assets/images/wireshark.png "Wireshark - capturing HTTP2 traffic")
-
+Remember to choose a proper interface - select `Loopback: lo0` for local server, tunnel interface (e.g. `utun1`) for server with VPN access, or `Wi-Fi: en0` for server with public access.
 
 If you don't see packets in HTTP2 protocol, click "Analyze" -> "Decode As...".
 Then, add `TCP port X` with `HTTP2` protocol, where `X` is port of gRPC server (e.g. `8083`).
+
+![wireshark](./assets/images/wireshark.png "Wireshark - capturing HTTP2 traffic")
 
 
 After the process you should have required data in hex:
