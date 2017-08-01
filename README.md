@@ -1,7 +1,7 @@
 # Developer blog
 
-Read at https://bkubiak.github.io.
+Read at [https://bkubiak.github.io](https://bkubiak.github.io).
 
-# Table of contents
+### Table of contents
 
 * [gRPC - raw requests](./grpc-raw-requests/)

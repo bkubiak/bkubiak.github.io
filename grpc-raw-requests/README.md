@@ -17,7 +17,7 @@ Remember to choose a proper interface - select `Loopback: lo0` for local server,
 If you don't see packets in HTTP2 protocol, click "Analyze" -> "Decode As...".
 Then, add `TCP port X` with `HTTP2` protocol, where `X` is port of gRPC server (e.g. `8083`).
 
-![wireshark](./assets/images/wireshark.png "Wireshark - capturing HTTP2 traffic")
+![wireshark](./images/wireshark.png "Wireshark - capturing HTTP2 traffic")
 
 
 After the process you should have required data in hex:
