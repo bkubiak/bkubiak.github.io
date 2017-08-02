@@ -35,3 +35,4 @@
 * debugging with gdb
 * profiling
 * dependecy management tool
+* debugging deadlocks
